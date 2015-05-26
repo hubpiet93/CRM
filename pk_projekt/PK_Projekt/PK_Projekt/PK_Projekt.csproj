@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23294EF8-62C9-4D96-98AE-044E0DA62B30}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PK_Projekt</RootNamespace>
+    <AssemblyName>PK_Projekt</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SystemLogowania.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LogowaniePackage\SystemLogowania.Contract.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\DaneKlientaOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\DaneKlientaOkno.Designer.cs">
+      <DependentUpon>DaneKlientaOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\DodajKlientaOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\DodajKlientaOkno.Designer.cs">
+      <DependentUpon>DodajKlientaOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\DodajTransakcjęOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\DodajTransakcjęOkno.Designer.cs">
+      <DependentUpon>DodajTransakcjęOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\EdytujKlientaOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\EdytujKlientaOkno.Designer.cs">
+      <DependentUpon>EdytujKlientaOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\HistoriaTransakcjiOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\HistoriaTransakcjiOkno.Designer.cs">
+      <DependentUpon>HistoriaTransakcjiOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\LogowanieOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\LogowanieOkno.Designer.cs">
+      <DependentUpon>LogowanieOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\NowaUsługaOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\NowaUsługaOkno.Designer.cs">
+      <DependentUpon>NowaUsługaOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkienka\PrzychódProcentowyZKlientaOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkienka\PrzychódProcentowyZKlientaOkno.Designer.cs">
+      <DependentUpon>PrzychódProcentowyZKlientaOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkienka\UsługiStatystykiOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkienka\UsługiStatystykiOkno.Designer.cs">
+      <DependentUpon>UsługiStatystykiOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkienka\PrzychódZKlientów.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkienka\PrzychódZKlientów.Designer.cs">
+      <DependentUpon>PrzychódZKlientów.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkienka\ZobowiązaniaNaKliencieOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkienka\ZobowiązaniaNaKliencieOkno.Designer.cs">
+      <DependentUpon>ZobowiązaniaNaKliencieOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\StatystykiOkno.Designer.cs">
+      <DependentUpon>StatystykiOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\UregulowanieOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\UregulowanieOkno.Designer.cs">
+      <DependentUpon>UregulowanieOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\WyślijMailaOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\WyślijMailaOkno.Designer.cs">
+      <DependentUpon>WyślijMailaOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrolki\WyświetlanieOkno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\WyświetlanieOkno.Designer.cs">
+      <DependentUpon>WyświetlanieOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\DaneKlientaOkno.resx">
+      <DependentUpon>DaneKlientaOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\DodajKlientaOkno.resx">
+      <DependentUpon>DodajKlientaOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\DodajTransakcjęOkno.resx">
+      <DependentUpon>DodajTransakcjęOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\EdytujKlientaOkno.resx">
+      <DependentUpon>EdytujKlientaOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\HistoriaTransakcjiOkno.resx">
+      <DependentUpon>HistoriaTransakcjiOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\LogowanieOkno.resx">
+      <DependentUpon>LogowanieOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\NowaUsługaOkno.resx">
+      <DependentUpon>NowaUsługaOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\StatystykiOkienka\PrzychódProcentowyZKlientaOkno.resx">
+      <DependentUpon>PrzychódProcentowyZKlientaOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\StatystykiOkienka\UsługiStatystykiOkno.resx">
+      <DependentUpon>UsługiStatystykiOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\StatystykiOkienka\PrzychódZKlientów.resx">
+      <DependentUpon>PrzychódZKlientów.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\StatystykiOkienka\ZobowiązaniaNaKliencieOkno.resx">
+      <DependentUpon>ZobowiązaniaNaKliencieOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\StatystykiOkno.resx">
+      <DependentUpon>StatystykiOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\UregulowanieOkno.resx">
+      <DependentUpon>UregulowanieOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\WyślijMailaOkno.resx">
+      <DependentUpon>WyślijMailaOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrolki\WyświetlanieOkno.resx">
+      <DependentUpon>WyświetlanieOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BazaDanych.Host\BazaDanych.Host.csproj">
+      <Project>{78d2d7ec-686c-42df-9130-e49fa0ee220b}</Project>
+      <Name>BazaDanych.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BazaDanych.Implementacja\BazaDanych.Implementacja.csproj">
+      <Project>{75a10198-60e2-4464-9871-23b021c7cffd}</Project>
+      <Name>BazaDanych.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BazaDanych.Kontrakt\BazaDanych.Kontrakt.csproj">
+      <Project>{599d2075-a22f-442f-a44f-29e9887d8e3c}</Project>
+      <Name>BazaDanych.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HistoriaTransakcji.Host\HistoriaTransakcji.Host.csproj">
+      <Project>{6555cad3-56c5-447d-8b76-57a18c85841d}</Project>
+      <Name>HistoriaTransakcji.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HistoriaTransakcji.Implementacja\HistoriaTransakcji.Implementacja.csproj">
+      <Project>{b885b6a8-4e4b-40e3-b066-82792aa769c0}</Project>
+      <Name>HistoriaTransakcji.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HistoriaTransakcji.Kontrakt\HistoriaTransakcji.Kontrakt.csproj">
+      <Project>{b3386998-de2c-439f-99f5-817eea4311d2}</Project>
+      <Name>HistoriaTransakcji.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Konfiguracja\Powiązanie.csproj">
+      <Project>{76b2154a-5263-4c65-9b7b-149d384b598b}</Project>
+      <Name>Powiązanie</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NowaUsługa.Host\NowaUsługa.Host.csproj">
+      <Project>{88838ced-6dff-46a0-9493-c5f5207e9546}</Project>
+      <Name>NowaUsługa.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NowaUsługa.Implementacja\NowaUsługa.Implementacja.csproj">
+      <Project>{d909b255-3466-4ccb-9bae-6d0b9d47c25f}</Project>
+      <Name>NowaUsługa.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NowaUsługa.Kontrakt\NowaUsługa.Kontrakt.csproj">
+      <Project>{d37ea389-f474-4452-bf02-84a093da540d}</Project>
+      <Name>NowaUsługa.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObsługaKlienta.Host\ObsługaKlienta.Host.csproj">
+      <Project>{f2fdad86-19a7-4bcf-aa60-5a2ac24d3456}</Project>
+      <Name>ObsługaKlienta.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObsługaKlienta.Implementacja\ObsługaKlienta.Implementacja.csproj">
+      <Project>{708d3071-de8b-4d69-857e-b89a30c056c9}</Project>
+      <Name>ObsługaKlienta.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObsługaKlienta.Kontrakt\ObsługaKlienta.Kontrakt.csproj">
+      <Project>{459191ce-4328-4aa0-8a6e-74ee97b01fd5}</Project>
+      <Name>ObsługaKlienta.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rejestracja.Host\Rejestracja.Host.csproj">
+      <Project>{8e51f728-f820-4eea-a281-1b295a063eba}</Project>
+      <Name>Rejestracja.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rejestracja.Implementacja\Rejestracja.Implementacja.csproj">
+      <Project>{1a840c3e-3f20-47bb-ac05-40c8204749b1}</Project>
+      <Name>Rejestracja.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rejestracja.Kontrakt\Rejestracja.Kontrakt.csproj">
+      <Project>{06797c1a-b58e-4c33-983d-dce154bea516}</Project>
+      <Name>Rejestracja.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statystyki.Host\Statystyki.Host.csproj">
+      <Project>{5c5493bc-e0ff-4bf9-805f-8b9c03034a17}</Project>
+      <Name>Statystyki.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statystyki.Implementacja\Statystyki.Implementacja.csproj">
+      <Project>{7f957d0b-2e85-4f31-82a9-427fedb794e1}</Project>
+      <Name>Statystyki.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statystyki.Kontrakt\Statystyki.Kontrakt.csproj">
+      <Project>{9a939959-8b06-47c2-934b-caa479b01df8}</Project>
+      <Name>Statystyki.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TypOperacji.Kontrakt\TypOperacji.Kontrakt.csproj">
+      <Project>{cbf081ff-6e62-4b39-9f10-f910cb3f8a1a}</Project>
+      <Name>TypOperacji.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WysyłanieMaili.Host\WysyłanieMaili.Host.csproj">
+      <Project>{56ec9c1d-b617-450e-8f09-b8165aef0660}</Project>
+      <Name>WysyłanieMaili.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WysyłanieMaili.Implementacja\WysyłanieMaili.Implementacja.csproj">
+      <Project>{3cecef05-bbdc-4f11-b972-23ccf04879cd}</Project>
+      <Name>WysyłanieMaili.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WysyłanieMaili.Kontrakt\WysyłanieMaili.Kontrakt.csproj">
+      <Project>{09a3c2fd-f00e-47d4-b499-f592587d7c52}</Project>
+      <Name>WysyłanieMaili.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wyświetl.Host\Wyświetl.Host.csproj">
+      <Project>{f6e3bddd-0387-4c44-b87f-1272aaac3e93}</Project>
+      <Name>Wyświetl.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wyświetl.Implementacja\Wyświetl.Implementacja.csproj">
+      <Project>{e0db3d9b-6f64-4d51-96a0-e05ca3f1793a}</Project>
+      <Name>Wyświetl.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wyświetl.Kontrakt\Wyświetl.Kontrakt.csproj">
+      <Project>{63990f06-6b75-4224-91cd-3a83f461b080}</Project>
+      <Name>Wyświetl.Kontrakt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Uzytkownicy.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Uzytkownicy_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Uzytkownicy.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

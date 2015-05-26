@@ -1,0 +1,13 @@
+Je¿eli program jest uruchamiany poraz pierwszy to nale¿y
+na pocz¹tku uruchomiæ plik Budowanie.bat za pomoc¹ msbuild 
+konsolê do uruchomienia Budowanie.bat znajdziesz w start-> wszystkie programy -> Visual studio->Visual studio tools - >Developer Command Prompt for VS2013
+
+Nastêpnie uruchomiæ Start.bat
+
+Je¿eli Program nie mo¿e komunikowaæ siê z baz¹ danych to nale¿y 
+zainstalowaæ LocalDB (Link poni¿ej).
+http://www.microsoft.com/betaexperience/pd/SQLEXPCTAV2/enus/default.aspx
+
+
+Login: pkuser
+Has³o: pkpass

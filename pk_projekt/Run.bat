@@ -1,0 +1,1 @@
+start Start\Start\bin\Debug\Start.exe

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75A10198-60E2-4464-9871-23B021C7CFFD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BazaDanych.Implementacja</RootNamespace>
+    <AssemblyName>BazaDanych.Implementacja</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BazaDanych.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BazaDanych.Kontrakt\BazaDanych.Kontrakt.csproj">
+      <Project>{599d2075-a22f-442f-a44f-29e9887d8e3c}</Project>
+      <Name>BazaDanych.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HistoriaTransakcji.Implementacja\HistoriaTransakcji.Implementacja.csproj">
+      <Project>{b885b6a8-4e4b-40e3-b066-82792aa769c0}</Project>
+      <Name>HistoriaTransakcji.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HistoriaTransakcji.Kontrakt\HistoriaTransakcji.Kontrakt.csproj">
+      <Project>{b3386998-de2c-439f-99f5-817eea4311d2}</Project>
+      <Name>HistoriaTransakcji.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NowaUsługa.Implementacja\NowaUsługa.Implementacja.csproj">
+      <Project>{d909b255-3466-4ccb-9bae-6d0b9d47c25f}</Project>
+      <Name>NowaUsługa.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NowaUsługa.Kontrakt\NowaUsługa.Kontrakt.csproj">
+      <Project>{d37ea389-f474-4452-bf02-84a093da540d}</Project>
+      <Name>NowaUsługa.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObsługaKlienta.Implementacja\ObsługaKlienta.Implementacja.csproj">
+      <Project>{708d3071-de8b-4d69-857e-b89a30c056c9}</Project>
+      <Name>ObsługaKlienta.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObsługaKlienta.Kontrakt\ObsługaKlienta.Kontrakt.csproj">
+      <Project>{459191ce-4328-4aa0-8a6e-74ee97b01fd5}</Project>
+      <Name>ObsługaKlienta.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rejestracja.Implementacja\Rejestracja.Implementacja.csproj">
+      <Project>{1a840c3e-3f20-47bb-ac05-40c8204749b1}</Project>
+      <Name>Rejestracja.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rejestracja.Kontrakt\Rejestracja.Kontrakt.csproj">
+      <Project>{06797c1a-b58e-4c33-983d-dce154bea516}</Project>
+      <Name>Rejestracja.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statystyki.Implementacja\Statystyki.Implementacja.csproj">
+      <Project>{7f957d0b-2e85-4f31-82a9-427fedb794e1}</Project>
+      <Name>Statystyki.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statystyki.Kontrakt\Statystyki.Kontrakt.csproj">
+      <Project>{9a939959-8b06-47c2-934b-caa479b01df8}</Project>
+      <Name>Statystyki.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TypOperacji.Kontrakt\TypOperacji.Kontrakt.csproj">
+      <Project>{cbf081ff-6e62-4b39-9f10-f910cb3f8a1a}</Project>
+      <Name>TypOperacji.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WysyłanieMaili.Implementacja\WysyłanieMaili.Implementacja.csproj">
+      <Project>{3cecef05-bbdc-4f11-b972-23ccf04879cd}</Project>
+      <Name>WysyłanieMaili.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WysyłanieMaili.Kontrakt\WysyłanieMaili.Kontrakt.csproj">
+      <Project>{09a3c2fd-f00e-47d4-b499-f592587d7c52}</Project>
+      <Name>WysyłanieMaili.Kontrakt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wyświetl.Implementacja\Wyświetl.Implementacja.csproj">
+      <Project>{e0db3d9b-6f64-4d51-96a0-e05ca3f1793a}</Project>
+      <Name>Wyświetl.Implementacja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wyświetl.Kontrakt\Wyświetl.Kontrakt.csproj">
+      <Project>{63990f06-6b75-4224-91cd-3a83f461b080}</Project>
+      <Name>Wyświetl.Kontrakt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BazaDanychProjekt.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BazaDanychProjekt_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BazaDanychProjekt.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
